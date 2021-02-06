@@ -26,6 +26,22 @@ const _ = {
     words(string) {
         const words = string.split(' ');
         return words;
+    },
+
+    pad(string, length) {
+        if(length <= string.length) {
+            return string;
+        }
+
+        const startPaddingLength = Math.floor((length - string.length) / 2);
+        console.log(startPaddingLength);
+        const endPaddingLength = length - string.length - startPaddingLength;
+
+        const paddedString = ' '.repeat(startPaddingLength) + string + ' '.repeat(endPaddingLength);
+        console.log(paddedString);
+
+        return paddedString;
+
     }
   };
 
