@@ -1,4 +1,6 @@
 const _ = {
+
+    // NUMBER FUNCTIONS 
     clamp (number, lower, upper) {
       const lowerClampedValue = Math.max(number, lower);
       const clampedValue = Math.min(lowerClampedValue, upper);
@@ -23,6 +25,8 @@ const _ = {
         return isInRange;
     },
 
+    // STRING FUNCTIONS
+
     words(string) {
         const words = string.split(' ');
         return words;
@@ -46,6 +50,7 @@ const _ = {
 
     },
 
+    //Object functions
     has(object, key) {
         const value = object[key];
 
@@ -81,6 +86,15 @@ const _ = {
         
         //undefined is returned if no truthy value is returned from the predicate function
         return undefined;
+    },
+
+    //Array functions
+    drop(array, number) {
+        if (number == undefined) {
+            number = 1;
+        }
+
+        return array.slice(number);
     }
   };
 
