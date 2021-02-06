@@ -33,10 +33,13 @@ const _ = {
             return string;
         }
 
+        //getting start padding length
         const startPaddingLength = Math.floor((length - string.length) / 2);
 
+        //getting end padding length
         const endPaddingLength = length - string.length - startPaddingLength;
 
+        //getting final padded string
         const paddedString = ' '.repeat(startPaddingLength) + string + ' '.repeat(endPaddingLength);
 
         return paddedString;
