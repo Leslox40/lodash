@@ -68,6 +68,20 @@ const _ = {
 
         return invertedObject;
     },
+
+    findKey(object, predicate) {
+        for (let key in object) {
+            //const value = object[key];
+            //predicateReturnValue = predicate(value);
+            //if(value) return key;
+
+            //if return value of the predicate function is truthy the key is returned
+            if (predicate(object[key])) return key;
+        }
+        
+        //undefined is returned if no truthy value is returned from the predicate function
+        return undefined;
+    }
   };
 
 
