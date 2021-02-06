@@ -54,8 +54,22 @@ const _ = {
         } else {
             return true;
         }
-    }
+    }, 
+
+    //inverts an object key/value pairs
+    invert(object) {
+        const invertedObject = {};
+
+        for (let key in object) {
+            //inverting takes place here
+            originalValue = object[key];
+            invertedObject[originalValue] = key; 
+        }
+
+        return invertedObject;
+    },
   };
+
 
 
 // Do not write or modify code below this line.
