@@ -21,6 +21,11 @@ const _ = {
         console.log(isInRange);
 
         return isInRange;
+    },
+
+    words(string) {
+        const words = string.split(' ');
+        return words;
     }
   };
 
