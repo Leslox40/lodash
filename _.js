@@ -34,18 +34,25 @@ const _ = {
         }
 
         const startPaddingLength = Math.floor((length - string.length) / 2);
-        console.log(startPaddingLength);
+
         const endPaddingLength = length - string.length - startPaddingLength;
 
         const paddedString = ' '.repeat(startPaddingLength) + string + ' '.repeat(endPaddingLength);
-        console.log(paddedString);
 
         return paddedString;
 
+    },
+
+    has(object, key) {
+        const value = object[key];
+
+        if (value == undefined) {
+            return false;
+        } else {
+            return true;
+        }
     }
   };
-
-
 
 
 // Do not write or modify code below this line.
