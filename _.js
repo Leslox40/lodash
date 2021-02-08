@@ -89,13 +89,26 @@ const _ = {
     },
 
     //Array functions
+    
+    //slices an array by using the number provided
     drop(array, number) {
         if (number == undefined) {
             number = 1;
         }
 
         return array.slice(number);
+    },
+
+    //keeps dropping elements from an array until true is returned
+    dropWhile(array, predicate) {
+        const dropNumber = array.findIndex((element, index) => {
+            return !predicate(element, index, array);
+        });
+
+        return this.drop(array, dropNumber);
     }
+
+
   };
 
 
