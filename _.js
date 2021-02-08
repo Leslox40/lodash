@@ -108,6 +108,7 @@ const _ = {
         return this.drop(array, dropNumber);
     },
 
+    //creates chunks of an array bases on the provided size and returns a new array with the chunked arrays
     chunk(array, size) {
         if (size == undefined) {
             size = 1;
@@ -123,17 +124,15 @@ const _ = {
 
             //pushing chunk into array
             arrayChunks.push(arrayChunk);
-            console.log(arrayChunks);
+
         }
 
-        console.log(arrayChunks);
         return arrayChunks;
     }
 
 
   };
 
-  _.chunk(['a', 'b', 'c', 'd'], 2);
 
 // Do not write or modify code below this line.
 module.exports = _;
