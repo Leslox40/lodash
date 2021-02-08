@@ -106,12 +106,34 @@ const _ = {
         });
 
         return this.drop(array, dropNumber);
+    },
+
+    chunk(array, size) {
+        if (size == undefined) {
+            size = 1;
+        }
+
+        const arrayChunks = [];
+
+        //looping through the array to slice it increment loop by
+        //size of chunk
+        for (let i = 0; i <= array.length-1; i += size) {
+            //slicing by chunk size
+            let arrayChunk = array.slice(i, i + size);
+
+            //pushing chunk into array
+            arrayChunks.push(arrayChunk);
+            console.log(arrayChunks);
+        }
+
+        console.log(arrayChunks);
+        return arrayChunks;
     }
 
 
   };
 
-
+  _.chunk(['a', 'b', 'c', 'd'], 2);
 
 // Do not write or modify code below this line.
 module.exports = _;
